@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx,css,scss}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx,css,scss}', 'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
   // darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
@@ -17,6 +17,7 @@ module.exports = {
         220: '70rem',
       },
       height: {
+        110: '25rem',
         120: '30rem',
       },
       width: {
@@ -79,5 +80,5 @@ module.exports = {
     },
   },
   // eslint-disable-next-line no-undef
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('flowbite/plugin')],
 };

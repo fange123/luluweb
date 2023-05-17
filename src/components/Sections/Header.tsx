@@ -26,27 +26,34 @@ const Header: FC = memo(() => {
 const DesktopNav: FC<{navSections: string[]; currentSection: string | null}> = memo(({navSections, currentSection}) => {
   const baseClass =
     '-m-1.5 p-1.5 rounded-md text-xl font-bold first-letter:uppercase hover:transition-colors hover:duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 sm:hover:text-orange-500 text-neutral-100';
-  const activeClass = classNames(baseClass, 'text-[#ff0000]');
+  const activeClass = classNames(baseClass, 'text-yellow-500');
   const inactiveClass = classNames(baseClass, 'text-neutral-100');
   return (
     <header className="fixed top-0 z-50 hidden w-full bg-neutral-900/50 p-4 backdrop-blur sm:block" id={headerID}>
-      <nav className="flex items-center justify-center gap-x-8">
+      <div className="flex w-full justify-between">
         <h1 className="text-2xl font-bold italic text-white">
           <Link href="/" className="flex items-center">
             <Image alt="" src={logo} className="mr-2 w-10" />
-            LuminaCoin
+            Lumina
           </Link>
         </h1>
-        {navSections.map(section => (
-          <NavItem
-            activeClass={activeClass}
-            current={section === (currentSection === '/home' ? '/' : currentSection?.slice(1))}
-            inactiveClass={inactiveClass}
-            key={section}
-            section={section}
-          />
-        ))}
-      </nav>
+        <nav className="flex items-center gap-x-8">
+          {navSections.map(section => (
+            <NavItem
+              activeClass={activeClass}
+              current={section === (currentSection === '/home' ? '/' : currentSection?.slice(1))}
+              inactiveClass={inactiveClass}
+              key={section}
+              section={section}
+            />
+          ))}
+        </nav>
+        <button
+          type="button"
+          className="rounded-full bg-gradient-to-r from-[#E11D48] to-[#3CA0E1]  px-8 text-center text-lg font-semibold  text-white  hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400">
+          Connect Wallet
+        </button>
+      </div>
     </header>
   );
 });
@@ -64,11 +71,16 @@ const MobileNav: FC<{navSections: string[]; currentSection: string | null}> = me
   const inactiveClass = classNames(baseClass, 'text-neutral-200 font-medium');
   return (
     <>
-      <div className=" flex h-16 justify-between bg-[#110d28] p-2 sm:hidden">
+      <div className="fixed top-0 z-50 flex h-12 w-full justify-between bg-[#110d28] p-2 sm:hidden">
         <h1 className="flex items-center text-xl font-bold text-white">
           <Image alt="" src={logo} className="mr-2 w-8" />
-          LuminaCoin
+          Lumina
         </h1>
+        <button
+          type="button"
+          className="mr-2 rounded-full bg-gradient-to-r from-[#E11D48] to-[#3CA0E1]  px-8 text-center  text-sm  font-semibold  text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400">
+          Connect Wallet
+        </button>
         <button aria-label="Menu Button" className="right-2 z-40  focus-visible:ring-offset-2 " onClick={toggleOpen}>
           <Image alt="" src={menu} className="h-8 w-8" />
           <span className="sr-only">Open sidebar</span>
@@ -95,7 +107,7 @@ const MobileNav: FC<{navSections: string[]; currentSection: string | null}> = me
             leave="transition ease-in-out duration-300 transform"
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full">
-            <div className="relative w-4/5 bg-stone-800">
+            <div className="relative w-4/5 bg-stone-800 pt-10">
               <nav className="mt-5 flex flex-col gap-y-2 px-2">
                 {navSections.map(section => (
                   <NavItem
@@ -123,8 +135,6 @@ const NavItem: FC<{
   inactiveClass: string;
   onClick?: () => void;
 }> = memo(({section, current, inactiveClass, activeClass, onClick}) => {
-  console.log(current);
-
   return (
     <Link
       className={classNames(current ? activeClass : inactiveClass, 'italic')}
