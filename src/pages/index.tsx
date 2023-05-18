@@ -5,7 +5,6 @@ import home from '../images/home.png';
 import homeCat from '../images/home_cat.png';
 import about from '../images/about_bg.png';
 import bar from '../images/bar.png';
-import logo from '../images/lulu.png';
 import Carousel from '../components/Carousel';
 
 const Home: FC = memo(() => {
@@ -63,7 +62,7 @@ const Home: FC = memo(() => {
             <Image alt="" className="z-1 relative h-auto w-full" priority src={homeCat} />
             <div className="z-2 absolute left-0 top-32 flex w-full flex-col items-center justify-center rounded-md border border-solid border-white bg-[#2a0303]/50 px-2 py-5 lg:top-120 lg:rounded-3xl lg:px-10 lg:pb-20">
               <h3 className="text-xl font-semibold uppercase leading-10 text-white lg:my-10 lg:text-3xl">
-                You Can Claim LULU Now!
+                You Can Claim LUMINA Now!
               </h3>
               <p className="break-words text-center text-lg leading-7 text-gray-200 lg:text-xl lg:leading-10">
                 A total of 1,000,000,000 Lumina tokens are now available to be claimed by those who have participated in
