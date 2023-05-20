@@ -1,7 +1,6 @@
 import {FC, memo, useState, useRef, useEffect} from 'react';
 import Image from 'next/image';
 import bg from '../images/bg.png';
-import home from '../images/home.png';
 import homeCat from '../images/home_cat.png';
 import about from '../images/about_bg.png';
 import bar from '../images/bar.png';
@@ -43,25 +42,19 @@ const Home: FC = memo(() => {
   }, []);
 
   return (
-    <div className="relative h-full w-full">
-      <Image alt={`bg`} className="absolute z-0 h-full w-full object-cover" placeholder="blur" priority src={bg} />
+    <div className="bg h-full w-full">
       {/* header */}
-      <section className="home relative flex h-screen w-full justify-center overflow-y-scroll pb-20">
-        <Image
-          alt=""
-          className="absolute top-0 z-0 h-auto w-full object-contain"
-          placeholder="blur"
-          priority
-          src={home}
-        />
-        <div className="z-1 container relative h-full w-full px-3 lg:px-20">
-          <h3 className="text-md mb-5 mt-24 w-full text-center font-semibold leading-10 text-white lg:mb-44 lg:mt-72 lg:text-3xl">
+      <section className=" home relative flex h-full w-full justify-center bg-[#0f0e0c]/90 pb-20">
+        <div className=" homeBg  mt-10 h-full w-full">
+          <h3 className="maria text-md mb-5 mt-24 w-full text-center font-semibold leading-10 tracking-widest text-white lg:mb-10 lg:mt-44 lg:text-4xl">
             Welcome To The World Of Lumina!
           </h3>
-          <div className="relative flex w-full flex-col justify-center px-5 lg:px-20">
-            <Image alt="" className="z-1 relative h-auto w-full" priority src={homeCat} />
-            <div className="z-2 absolute left-0 top-32 flex w-full flex-col items-center justify-center rounded-md border border-solid border-white bg-[#2a0303]/50 px-2 py-5 lg:top-120 lg:rounded-3xl lg:px-10 lg:pb-20">
-              <h3 className="text-xl font-semibold uppercase leading-10 text-white lg:my-10 lg:text-3xl">
+          <h4 className="maria text-md mb-5 w-full text-center font-semibold leading-10 tracking-widest text-white lg:mb-32  lg:text-3xl">
+            The Shining Star of the Future Economy
+          </h4>
+          <div className=" flex w-full flex-col justify-center px-5 lg:px-32 lg:pt-20">
+            <div className=" flex w-full flex-col items-center justify-center rounded-2xl border border-solid border-white bg-[#2a0303]/50 px-5 py-10  lg:rounded-3xl lg:px-10 lg:pb-20">
+              <h3 className="text-center text-xl font-semibold uppercase leading-10 tracking-wider text-white lg:my-10 lg:text-3xl">
                 You Can Claim LUMINA Now!
               </h3>
               <p className="break-words text-center text-lg leading-7 text-gray-200 lg:text-xl lg:leading-10">
@@ -96,7 +89,7 @@ const Home: FC = memo(() => {
         </div>
       </section>
       {/* about */}
-      <section className="about relative mb-5 mt-20 px-5 lg:flex lg:px-24 lg:py-20">
+      <section className="about  mb-5 mt-20 px-5 lg:flex lg:px-24 lg:py-20">
         <div className="lg:ml-20 lg:flex-1">
           <h3 className="mb-5 text-3xl font-semibold leading-10 text-white">What Is Lumina?</h3>
           <p className="mb-6  break-words text-xl leading-8 text-white">

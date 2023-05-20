@@ -29,9 +29,11 @@ const DesktopNav: FC<{navSections: string[]; currentSection: string | null}> = m
   const activeClass = classNames(baseClass, 'text-yellow-500');
   const inactiveClass = classNames(baseClass, 'text-neutral-100');
   return (
-    <header className="fixed top-0 z-50 hidden w-full bg-neutral-900/50 p-4 backdrop-blur sm:block" id={headerID}>
+    <header
+      className="fixed top-0 z-50 hidden w-full bg-neutral-900/50 p-4 px-6 backdrop-blur sm:block lg:px-20"
+      id={headerID}>
       <div className="flex w-full justify-between">
-        <h1 className="text-2xl font-bold italic text-white">
+        <h1 className="maria text-2xl font-bold italic text-white">
           <Link href="/" className="flex items-center">
             <Image alt="" src={logo} className="mr-2 w-10" />
             Lumina
@@ -71,8 +73,8 @@ const MobileNav: FC<{navSections: string[]; currentSection: string | null}> = me
   const inactiveClass = classNames(baseClass, 'text-neutral-200 font-medium');
   return (
     <>
-      <div className="fixed top-0 z-50 flex h-12 w-full justify-between bg-[#110d28] p-2 sm:hidden">
-        <h1 className="flex items-center text-xl font-bold text-white">
+      <div className="fixed top-0 z-50 flex h-12 w-full justify-between bg-[#110d28] p-2 px-6 sm:hidden">
+        <h1 className="maria flex items-center text-xl font-bold text-white">
           <Image alt="" src={logo} className="mr-2 w-8" />
           Lumina
         </h1>

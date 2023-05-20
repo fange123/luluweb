@@ -6,6 +6,38 @@
   .text-time-shadow {
     text-shadow: 6px 6px 6px rgb(225, 29, 72);
   }
+
+  .homeBg {
+    background-image: url(./images/homebg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .bg {
+    background-image: url(./images/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .maria {
+    font-family: 'maria', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      'Noto Color Emoji';
+  }
+  .elegant {
+    font-family: 'elegant', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      'Noto Color Emoji';
+  }
+
+  @font-face {
+    font-family: 'maria';
+    src: url(./fonts/Maria-Regular-2.otf);
+  }
+
+  @font-face {
+    font-family: 'elegant';
+    src: url(./fonts/Zhiyong-Elegant-2.ttf);
+  }
 }
 
 @layer utilities {

@@ -4,14 +4,14 @@ import logo from '../../images/lulu.png';
 
 const Footer: FC = () => {
   return (
-    <section className="footer relative w-full px-5 py-6 text-white lg:mt-40 lg:px-20">
-      <h3 className="break-words text-center font-semibold leading-9 lg:text-3xl">
+    <section className="footer relative mt-20 w-full px-5 py-6 text-white lg:mt-40 lg:px-20">
+      <h3 className=" break-words text-center text-2xl font-semibold leading-9 lg:text-3xl">
         Lumina is more than just a currency.
       </h3>
-      <h3 className="mt-5 break-words text-center font-semibold leading-9 lg:text-3xl">
+      <h3 className=" mt-5 break-words text-center text-2xl font-semibold leading-9 lg:text-3xl">
         It is a vibrant community of individuals who share a common vision of a decentralized future.
       </h3>
-      <div className="container mx-auto space-y-6 divide-y divide-gray-400 divide-opacity-50 px-6 md:space-y-12 lg:mt-20 lg:px-44">
+      <div className="container mx-auto mt-20 space-y-6 divide-y divide-gray-400 divide-opacity-50 px-6 md:space-y-12 lg:px-44">
         <div className="grid grid-cols-12">
           <div className="col-span-full pb-6 md:col-span-6 md:pb-0">
             <div className="mt-5">
@@ -19,11 +19,11 @@ const Footer: FC = () => {
                 <div className="h-18 flex w-12 items-center justify-center rounded-full dark:bg-violet-400">
                   <Image alt="" src={logo} className="h-full w-full flex-shrink-0" />
                 </div>
-                <span className="self-center text-2xl font-semibold">Lumina</span>
+                <span className="maria self-center text-2xl font-semibold">Lumina</span>
               </a>
             </div>
 
-            <h3 className="self-center text-center text-xl lg:text-left">Unparalleled Currency Glory</h3>
+            <h3 className="self-center text-center text-xl italic lg:text-left">Unparalleled Currency Glory</h3>
           </div>
         </div>
         <div className="grid justify-center pt-6 lg:justify-between">
